@@ -2,3 +2,25 @@
 if($('.pagepiling').length>0){$('.pagepiling').pagepiling({scrollingSpeed:280,loopBottom:true,anchors:['page1','page2','page3','page4','page5','page6','page7'],afterLoad:function(anchorLink,index){if($('.pp-section.active').scrollTop()>0){$('.navbar').removeClass('navbar-white');}
 else{$('.navbar').addClass('navbar-white');}}});}
 $('#pp-nav').remove().appendTo('.animsition').addClass('white right-boxed d-none d-sm-block');$('.pp-nav-up').on('click',function(){$.fn.pagepiling.moveSectionUp();});$('.pp-nav-down').on('click',function(){$.fn.pagepiling.moveSectionDown();});$('.project-box').on('mouseover',function(){var index=$('.project-box').index(this);$('.bg-changer .section-bg').removeClass('active').eq(index).addClass('active');});if($('.js-form').length){$('.js-form').each(function(){$(this).validate({errorClass:'error',submitHandler:function(form){$.ajax({type:"POST",url:"mail.php",data:$(form).serialize(),success:function(){$('.form-group-message').show();$('#error').hide();$('#success').show();},error:function(){$('.form-group-message').show();$('#success').hide();$('#error').show();}});}});});}})(jQuery);
+
+
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById("myImg");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+    // Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+            modal.style.display = "none";
+        }

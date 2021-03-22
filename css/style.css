@@ -141,3 +141,25 @@ strong {
   content: "";
   top: 5px;
 }
+/* image zoom on click */
+
+#myImg{
+  width: 100%;
+  max-width: 12.5rem;
+}
+#myModal img{
+  width: 60%;
+  border-radius: .5rem;
+  margin: 5% 22%;
+}
+#myModal{
+  padding: 2%;
+  background: #0000009e;
+  color: #fff;
+}
+#myModal span{
+  color: #fff;
+}
+#myModal #caption{
+  text-align: center;
+}
